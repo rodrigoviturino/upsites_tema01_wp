@@ -16,10 +16,20 @@ function up_footer_customizer( $wp_customize ) {
     $wp_customize->add_setting( 'up_copyright', [ 'default' => "" ]);
 
         // Rede social Footer
-    // $wp_customize->add_setting('up_facebook', ['default' => '']);
-    // $wp_customize->add_setting('up_twitter', ['default' => '']);
-    // $wp_customize->add_setting('up_linkedin', ['default' => '']);
-    // $wp_customize->add_setting('up_instagram', ['default' => '']);
+    $wp_customize->add_setting('up_facebook_footer', ['default' => '']);
+    $wp_customize->add_setting('up_twitter_footer', ['default' => '']);
+    $wp_customize->add_setting('up_linkedin_footer', ['default' => '']);
+    $wp_customize->add_setting('up_instagram_footer', ['default' => '']);
+    
+    // Coluna
+    $wp_customize->add_setting('up_title_empresa', ['default' => '']);
+    $wp_customize->add_setting('up_title_servicos', ['default' => '']);
+    $wp_customize->add_setting('up_title_suporte', ['default' => '']);
+        // Localização
+    $wp_customize->add_setting('up_title_local', ['default' => '']);
+    $wp_customize->add_setting('up_link_address_local', ['default' => '']);
+    $wp_customize->add_setting('up_text_address_local', ['default' => '']);
+
 
     //Sections
     $wp_customize->add_section('up_footer_section', [
@@ -112,7 +122,6 @@ function up_footer_customizer( $wp_customize ) {
                 'section' => 'up_footer_section',
                 'settings' => 'up_copyright',
                 'type' => 'text' ,
-
             ]
         )
     );
@@ -121,65 +130,147 @@ function up_footer_customizer( $wp_customize ) {
     
     // // Rede Social Footer
     
-    // $wp_customize->add_control(
-    //     new WP_Customize_Control (
-    //         $wp_customize,
+    $wp_customize->add_control(
+        new WP_Customize_Control (
+            $wp_customize,
 
-    //         'up_facebook',
-    //         [
-    //             'label' => 'Link do Facebook',
-    //             'section' => 'up_footer_section',
-    //             'settings' => 'up_facebook',
-    //             'type' => 'text' ,
-
-    //         ]
-    //     )
-    // );
+            'up_facebook_footer',
+            [
+                'label' => 'Link do Facebook',
+                'section' => 'up_footer_section',
+                'settings' => 'up_facebook_footer',
+                'type' => 'text' ,
+            ]
+        )
+    );
     
-    // $wp_customize->add_control(
-    //     new WP_Customize_Control (
-    //         $wp_customize,
+    $wp_customize->add_control(
+        new WP_Customize_Control (
+            $wp_customize,
 
-    //         'up_twitter',
-    //         [
-    //             'label' => 'Link do Twitter',
-    //             'section' => 'up_footer_section',
-    //             'settings' => 'up_twitter',
-    //             'type' => 'text' ,
-
-    //         ]
-    //     )
-    // );
+            'up_twitter_footer',
+            [
+                'label' => 'Link do Twitter',
+                'section' => 'up_footer_section',
+                'settings' => 'up_twitter_footer',
+                'type' => 'text' ,
+            ]
+        )
+    );
     
-    // $wp_customize->add_control(
-    //     new WP_Customize_Control (
-    //         $wp_customize,
+    $wp_customize->add_control(
+        new WP_Customize_Control (
+            $wp_customize,
 
-    //         'up_linkedin',
-    //         [
-    //             'label' => 'Link do Linkedin',
-    //             'section' => 'up_footer_section',
-    //             'settings' => 'up_linkedin',
-    //             'type' => 'text' ,
-
-    //         ]
-    //     )
-    // );
+            'up_linkedin_footer',
+            [
+                'label' => 'Link do Linkedin',
+                'section' => 'up_footer_section',
+                'settings' => 'up_linkedin_footer',
+                'type' => 'text' ,
+            ]
+        )
+    );
     
-    // $wp_customize->add_control(
-    //     new WP_Customize_Control (
-    //         $wp_customize,
+    $wp_customize->add_control(
+        new WP_Customize_Control (
+            $wp_customize,
 
-    //         'up_instagram',
-    //         [
-    //             'label' => 'Link do Instagram',
-    //             'section' => 'up_footer_section',
-    //             'settings' => 'up_instagram',
-    //             'type' => 'text' ,
+            'up_instagram_footer',
+            [
+                'label' => 'Link do Instagram',
+                'section' => 'up_footer_section',
+                'settings' => 'up_instagram_footer',
+                'type' => 'text' ,
+            ]
+        )
+    );
 
-    //         ]
-    //     )
-    // );
+    // Coluna Empresa
+    $wp_customize->add_control(
+        new WP_Customize_Control (
+            $wp_customize,
+
+            'up_title_empresa',
+            [
+                'label' => 'Titulo Coluna Empresa',
+                'section' => 'up_footer_section',
+                'settings' => 'up_title_empresa',
+                'type' => 'text' ,
+            ]
+        )
+    );
+
+    // Coluna Serviços
+    $wp_customize->add_control(
+        new WP_Customize_Control (
+            $wp_customize,
+
+            'up_title_servicos',
+            [
+                'label' => 'Titulo Coluna Serviços',
+                'section' => 'up_footer_section',
+                'settings' => 'up_title_servicos',
+                'type' => 'text' ,
+            ]
+        )
+    );
+
+    // Coluna Suporte
+    $wp_customize->add_control(
+        new WP_Customize_Control (
+            $wp_customize,
+
+            'up_title_suporte',
+            [
+                'label' => 'Titulo Coluna Suporte',
+                'section' => 'up_footer_section',
+                'settings' => 'up_title_suporte',
+                'type' => 'text' ,
+            ]
+        )
+    );
+
+    // Coluna Localização
+    $wp_customize->add_control(
+        new WP_Customize_Control (
+            $wp_customize,
+
+            'up_title_local',
+            [
+                'label' => 'Titulo Coluna Localização',
+                'section' => 'up_footer_section',
+                'settings' => 'up_title_local',
+                'type' => 'text' ,
+            ]
+        )
+    );
+    $wp_customize->add_control(
+        new WP_Customize_Control (
+            $wp_customize,
+
+            'up_link_address_local',
+            [
+                'label' => 'Link do Google Maps',
+                'section' => 'up_footer_section',
+                'settings' => 'up_link_address_local',
+                'type' => 'text' ,
+            ]
+        )
+    );
+    $wp_customize->add_control(
+        new WP_Customize_Control (
+            $wp_customize,
+
+            'up_text_address_local',
+            [
+                'label' => 'Texto Endereço Localização',
+                'section' => 'up_footer_section',
+                'settings' => 'up_text_address_local',
+                'type' => 'textarea' ,
+            ]
+        )
+    );
     
 
 }

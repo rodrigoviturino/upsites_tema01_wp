@@ -66,7 +66,10 @@
 
                 <div class="col-md-2 footer__menu__column">
                     <ul>
-                        <h5 class="text-white">Company</h5>
+                    <?php if(get_theme_mod('up_title_empresa') ) : ?>
+                        <h5 class="text-white"><?php echo get_theme_mod('up_title_empresa'); ?></h5>
+                    <?php endif; ?>
+
                         <li>
                             <a href="#">Turnaround Consulting</a>
                         </li>
@@ -87,7 +90,10 @@
 
                 <div class="col-md-2 footer__menu__column">
                     <ul>
-                        <h5 class="text-white">Services</h5>
+                    <?php if(get_theme_mod('up_title_servicos') ) : ?>
+                        <h5 class="text-white"><?php echo get_theme_mod('up_title_servicos'); ?></h5>
+                    <?php endif; ?>
+
                         <li>
                             <a href="#">Audit & Issurance</a>
                         </li>
@@ -108,7 +114,10 @@
 
                 <div class="col-md-2 col-11 footer__menu__column">
                     <ul>
-                        <h5 class="text-white">Help Center</h5>
+                    <?php if(get_theme_mod('up_title_suporte') ) : ?>
+                        <h5 class="text-white"><?php echo get_theme_mod('up_title_suporte'); ?></h5>
+                    <?php endif; ?>
+
                         <li>
                             <a href="#">FAQS</a>
                         </li>
@@ -129,38 +138,52 @@
 
                 <div class="col-md-3 col-10 footer__menu__columnInfos">
                     <ul>
-                        <h5 class="text-white">Get in touch</h5>
+                    <?php if(get_theme_mod('up_title_local') ) : ?>
+                        <h5 class="text-white"><?php echo get_theme_mod('up_title_local'); ?></h5>
+                    <?php endif; ?>
+
+                        
                         <li class="location">
                             <span>
                                 <i class="fas fa-map-marker-alt"></i>
                             </span>
-                            <a href="#">360 Harvest St, North Subract, London. Ipsum.
-                            United States Of America.</a>
+                            <?php if( get_theme_mod('up_link_address_local') && get_theme_mod('up_text_address_local') ) : ?>
+                                <a href="<?= get_theme_mod('up_link_address_local') ?>"> <?= get_theme_mod('up_text_address_local'); ?></a>
+                            <?php endif; ?>
                         </li>
-                        <li class="phone">
-                            <span>
-                                <i class="fas fa-phone-alt"></i>
-                            </span>
-                            <a href="#">3695-548555 - 0254-6589569</a>
-                        </li>
+
+                        <?php if( get_theme_mod('up_link_phone_address') || get_theme_mod('up_phone_address') ) : ?>
+                            <li class="phone">
+                                <span>
+                                    <i class="fas fa-phone-alt"></i>
+                                </span>
+                                    <a href="<?= get_theme_mod('up_link_phone_address') ?>"> <?= get_theme_mod('up_phone_address'); ?> </a>
+                            </li>
+                        <?php endif; ?>
+                        
+                        <?php if( get_theme_mod('up_link_email_address') && get_theme_mod('up_email_address')) : ?>
                         <li class="email">
                             <span>
                                 <i class="fas fa-envelope"></i>
                             </span>
-                            <a href="#">info@consultante.org</a>
+                            <a href="<?= get_theme_mod('up_link_email_address'); ?>"><?= get_theme_mod('up_email_address'); ?> </a>
                         </li>
-                        <li class="website">
-                            <span>
-                                <i class="fas fa-globe-asia"></i>
-                            </span>
-                            <a href="#">www.consultante.org</a>
-                        </li>
-                        
+                        <?php endif; ?>
+
+                        <?php if( get_theme_mod('up_link_website') && get_theme_mod('up_website')) : ?>
+                            <li class="website">
+                                <span>
+                                    <i class="fas fa-globe-asia"></i>
+                                </span>
+                                <a href="<?= get_theme_mod('up_link_website'); ?>"><?= get_theme_mod('up_website'); ?></a>
+                            </li>
+                        <?php endif; ?>
+
                     </ul>
                 </div>
 
                 <div class="col-md-3 d-flex align-items-center footer__menu__column">
-                    <img src="<?php echo get_template_directory_uri() ?>'/public/images/footer-map.png' " alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?> /public/images/footer-map.png " alt="Mapa Footer">
                 </div>
 
 
@@ -187,7 +210,7 @@
 <!-- Scripts -->
     <!-- <script src="./theme.min.js"></script> -->
 <!-- end Scripts -->
-<script src=" <?php echo get_template_directory_uri() ?>'/node_modules/bootstrap/dist/js/bootstrap.min.js' "></script>
+<script src=" <?php echo get_template_directory_uri(); ?>/node_modules/bootstrap/dist/js/bootstrap.min.js "></script>
 
 <script>
 let menu = document.querySelector('.header__rowBottom');

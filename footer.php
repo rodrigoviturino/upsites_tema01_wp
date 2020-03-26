@@ -5,9 +5,14 @@
             <div class="footer__top__wrapper row">
 
                 <div class="footer__top__wrapper__logo col-md-6">
-                    <a href="#">
-                        <img src="<?php echo get_template_directory_uri() ?>'/public/images/footer-logo-white.png ' " alt="">
-                    </a>
+                    <?php 
+                        $img_logo = get_template_directory_uri() . '/public/images/withe_logo.png';
+                        if(get_theme_mod('up_logo_footer') ) : 
+                    ?>
+                        <a href="<?php bloginfo(url); ?>" class="logo">
+                            <img class="img-responsive" src="<?php echo $img_logo = get_theme_mod('up_logo_footer'); ?> " alt="<?php echo get_theme_mod('up_desc_logo_footer') ?>">
+                        </a>
+                    <?php endif; ?>
                 </div>
                 
                 <div class="footer__top__wrapper__redeSocial col-md-6">

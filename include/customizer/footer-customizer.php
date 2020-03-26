@@ -4,7 +4,10 @@
 function up_footer_customizer( $wp_customize ) {
  
     // Settings 
-        // Informações
+        // Logo
+    $wp_customize->add_setting( 'up_logo_footer', [ 'default' => "" ]);
+    
+    // Informações
     $wp_customize->add_setting( 'up_title_menu', [ 'default' => "" ]);
     $wp_customize->add_setting( 'up_title_courses', [ 'default' => "" ]);
     $wp_customize->add_setting( 'up_title_topics', [ 'default' => "" ]);
@@ -25,6 +28,19 @@ function up_footer_customizer( $wp_customize ) {
     ]);
 
     //Controllers 
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control (
+            $wp_customize,
+
+            'up_logo_footer',
+            [
+                'label' => 'Logo Footer',
+                'section' => 'up_footer_section',
+                'settings' => 'up_logo_footer',
+            ]
+        )
+    );
+
     $wp_customize->add_control(
         new WP_Customize_Control (
             $wp_customize,

@@ -66,11 +66,14 @@
             <div class="row wrapper align-items-center justify-content-between">
                 <div class="col-md-6 col-12 header__rowCenter__logo">
                     <a href="<?php bloginfo('url'); ?>">
-                        <?php
-                            if(function_exists('the_custom_logo') ) {
-                                the_custom_logo();
-                            }
+                        <?php 
+                        $img_logo = get_template_directory_uri() . '/public/images/logo.png';
+                            if(get_theme_mod('up_logo_header') ) : 
                         ?>
+                            <a class="navbar-brand m-auto order-1 order-lg-2" href="<?php bloginfo(url);?> ">
+                                <img src="<?php echo $img_logo ?> " class='img-fluid' alt="Logo Empresa" <?php echo get_theme_mod('up_logo_header'); ?>>
+                            </a>
+                        <?php endif; ?>
                     </a>
                 </div>
 

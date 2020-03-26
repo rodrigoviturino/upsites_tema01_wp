@@ -14,27 +14,35 @@
                     <ul>
 
                         
-                        <?php if(get_theme_mod('up_facebook') ) : ?>
+                        <?php if(get_theme_mod('up_facebook_footer') ) : ?>
                             <li>
-                                <a href="<?php echo get_theme_mod('up_facebook'); ?>">
+                                <a href="<?php echo get_theme_mod('up_facebook_footer'); ?>">
                                     <i class="fab fa-facebook-f"></i>
                                 </a>
                             </li>
                         <?php endif; ?>
 
                         
-                        <?php if(get_theme_mod('up_twitter') ) : ?>
+                        <?php if(get_theme_mod('up_twitter_footer') ) : ?>
                             <li>
-                                <a href="<?php echo get_theme_mod('up_twitter'); ?>">
+                                <a href="<?php echo get_theme_mod('up_twitter_footer'); ?>">
                                     <i class="fab fa-twitter"></i>
                                 </a>
                             </li>
                         <?php endif; ?>
 
                         
-                        <?php if(get_theme_mod('up_instagram') ) : ?>
+                        <?php if(get_theme_mod('up_linkedin_footer') ) : ?>
                             <li>
-                                <a href="<?php echo get_theme_mod('up_instagram'); ?>">
+                                <a href="<?php echo get_theme_mod('up_linkedin_footer'); ?>">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </li>
+                        <?php endif; ?>
+
+                        <?php if(get_theme_mod('up_instagram_footer') ) : ?>
+                            <li>
+                                <a href="<?php echo get_theme_mod('up_instagram_footer'); ?>">
                                     <i class="fab fa-instagram"></i>
                                 </a>
                             </li>
@@ -174,7 +182,7 @@
 <!-- Scripts -->
     <!-- <script src="./theme.min.js"></script> -->
 <!-- end Scripts -->
-
+<script src=" <?php echo get_template_directory_uri() ?>'/node_modules/bootstrap/dist/js/bootstrap.min.js' "></script>
 
 <script>
 let menu = document.querySelector('.header__rowBottom');
@@ -193,6 +201,8 @@ window.addEventListener('scroll', () => {
 });
 
 </script>
+
+<?php get_footer(); ?>
 
 </body>
 </html>

@@ -9,7 +9,7 @@ function up_theme_styles(){
 
     // JAVASCRIPT
         wp_enqueue_script('jquery_js', get_template_directory_uri() . '/src/js/libs/jquery-3.4.1.min.js', [], true);
-        wp_enqueue_script('theme_js', get_template_directory_uri() . '/public/theme.min.js', ['jquery'], $version, true);
+        wp_enqueue_script('theme_js', get_template_directory_uri() . '/public/theme.min.js', ['jquery'], true);
 }
 
 

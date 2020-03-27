@@ -57,6 +57,10 @@
 
 /* end Theme */ 
 
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
 .header__rowBottom.scrollHide {
     transition: all 0.5s;
     position: fixed;

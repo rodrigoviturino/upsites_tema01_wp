@@ -48,11 +48,18 @@
                 @include responsive-font-size(12px);
             }
 
-            p {
+            a {
                 color: $white;
                 margin: 0;
+                text-decoration: none;
+                transition: all 0.7s;
                 font-weight: $font-weight-bold;
                 @include responsive-font-size(15px);
+
+                &:hover {
+                    color: $gray-300;
+                    transition: all 0.7s;
+                }
 
                 @include media-breakpoint-only(xs) {
                     @include responsive-font-size(12px);
@@ -78,6 +85,10 @@
         }
 
         &__office {
+            @include media-breakpoint-only(xs) { 
+                justify-content: flex-start !important;
+            }
+
             ul {
                 display: flex;
                 align-items: center;
@@ -93,10 +104,18 @@
                         line-height: 21px;
                         @include responsive-font-size(14px);
 
+                        @include media-breakpoint-only(sm) { 
+                            @include responsive-font-size(13px);
+                        }
+
                         &:nth-child(2){
                             line-height: 14px;
                             font-weight: bold;
                             @include responsive-font-size(14px);
+
+                            @include media-breakpoint-only(sm) { 
+                                @include responsive-font-size(12px);
+                            }
                         }
                     }
                     
@@ -108,6 +127,8 @@
 
             @include media-breakpoint-only(xs) { 
                 justify-content: flex-start !important;
+                margin: map-get($spacers, 3 ) 0 0;
+                // margin: map-get($spacers, 3) 0 0 0  - map-get($spacers,5 );
             }
 
             ul {
@@ -161,6 +182,10 @@
             
 
                 .navbar-nav {
+                    @include media-breakpoint-only(xs) { 
+                        padding: map-get($spacers, 1) 0;
+                    }
+                    
                     .menu-item {
                         a {
                             color: $white;
@@ -168,7 +193,13 @@
                             text-transform: uppercase;
                             text-decoration: none;
                             transition: $transition-base;
+                            display: inline-block;
                             @include responsive-font-size(16px);
+
+                            @include media-breakpoint-only(xs) { 
+                                padding: map-get($spacers, 1) 0;
+                            }
+        
 
                             &:nth-child(odd) {
                                 margin: 0 map-get($spacers, 2);

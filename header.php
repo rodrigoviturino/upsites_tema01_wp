@@ -54,7 +54,9 @@
                     </ul>
                 </div>
                 <div class="header__rowTop__columnRight col-md-3 col-6">
-                    <p>REQUEST FOR QUOTE</p>
+                    <a href="<?= get_theme_mod('up_link_contact_header'); ?>">
+                        <?= get_theme_mod('up_text_contact_header'); ?>REQUEST FOR QUOTE
+                    </a>
                 </div>
             </div>
         </div>
@@ -64,7 +66,7 @@
     <section class="header__rowCenter">
         <div class="container">
             <div class="row wrapper align-items-center justify-content-between">
-                <div class="col-md-6 col-12 header__rowCenter__logo">
+                <div class="col-md-4 col-sm-3 col-12 header__rowCenter__logo">
                     <a href="<?php bloginfo('url'); ?>">
                         <?php 
                         $img_logo = get_template_directory_uri() . '/public/images/logo.png';
@@ -77,7 +79,7 @@
                     </a>
                 </div>
 
-                <div class="col-md-4 col-12 header__rowCenter__office d-flex justify-content-end">
+                <div class="col-md-5 col-sm-6 col-12 header__rowCenter__office d-flex justify-content-end">
                     <ul class="list-unstyled">
                         <li class="item">
                             <a href="#">
@@ -98,7 +100,7 @@
                     </ul>
                 </div>
 
-                <div class="col-md-2 col-12 header__rowCenter__contact d-flex justify-content-end">
+                <div class="col-md-3 col-sm-3 col-12 header__rowCenter__contact d-flex justify-content-end">
                     <ul class="list-unstyled">
                         <li>
                             <a href="#">
@@ -199,7 +201,7 @@
 
                         <li class="mx-3">
                             <a href="#">
-                                <i class="fas fa-shopping-cart text-warning"></i>
+                                <i class="fas fa-shopping-cart"></i>
                             </a>
                         </li>
 

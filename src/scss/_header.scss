@@ -8,6 +8,12 @@
         @include media-breakpoint-only(xs) {
             background: linear-gradient(135deg,#222 26%,#222 53%,#eba800 53%);
         }
+        @include media-breakpoint-only(xl) {
+            background: linear-gradient(135deg,#222 26%,#222 75%,#eba800 72%);
+        }
+        @media (min-width: 1441px) {
+            background: linear-gradient(135deg,#222 26%,#222 69%,#eba800 66%);
+        }
 
         &__columnLeft {
             // padding: 10px 0;

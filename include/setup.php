@@ -29,5 +29,8 @@ function up_after_setup(){
     ]);
 
     register_nav_menu('main-menu', ('Menu Principal') );
-    register_nav_menu('footer-menu', ('Footer Menu') );
+
+    register_nav_menu('footer1-menu', ('Footer 1 Menu') );
+    register_nav_menu('footer2-menu', ('Footer 2 Menu') );
+    register_nav_menu('footer3-menu', ('Footer 3 Menu') );
 }

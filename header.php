@@ -142,75 +142,10 @@
                         ]);
                     }
                 ?>
-
-                    <!-- <ul class="navbar-nav mr-auto">
-
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Company<span class="sr-only">(current)</span></a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Cases<span class="sr-only">(current)</span></a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">News<span class="sr-only">(current)</span></a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pages<span class="sr-only">(current)</span></a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Shop<span class="sr-only">(current)</span></a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact<span class="sr-only">(current)</span></a>
-                        </li>
-
-                    </ul> -->
                 
                 </div>
 
-                <ul class="wrapper d-flex align-items-center order-2">
-                    <li>
-                    <!-- Example single danger button -->
-                        <div class="btn-group">
-                            <button type="button" class="btn lang text-white"><img src="<?php echo get_template_directory_uri(); ?> /public/images/icon-lang.png" alt="">USA Office</button>
-
-                            <button type="button" class="btn  dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
-                                <span class="sr-only">Toggle Dropdown</span>
-                            </button>
-
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Separated link</a>
-                            </div>
-
-                        </div>
-
-                        </li>
-
-                        <li class="mx-3">
-                            <a href="#">
-                                <i class="fas fa-shopping-cart"></i>
-                            </a>
-                        </li>
-
-                        <li class="">
-                            <a href="#">
-                                <i class="fas fa-search text-warning"></i>
-                            </a>
-                        </li>
-                </ul>
+                
             </nav>
 
             </div>

@@ -29,6 +29,15 @@ function up_footer_customizer( $wp_customize ) {
     $wp_customize->add_setting('up_title_local', ['default' => '']);
     $wp_customize->add_setting('up_link_address_local', ['default' => '']);
     $wp_customize->add_setting('up_text_address_local', ['default' => '']);
+    // $wp_customize->add_setting('up_link_phone_address', ['default' => '']);
+    $wp_customize->add_setting('up_phone_address', ['default' => '']);
+    $wp_customize->add_setting('up_link_email_address', ['default' => '']);
+    $wp_customize->add_setting('up_email_address', ['default' => '']);
+    $wp_customize->add_setting('up_link_website', ['default' => '']);
+    $wp_customize->add_setting('up_website', ['default' => '']);
+
+
+
         // Imagem Mapa
     $wp_customize->add_setting('up_image_map', ['default' => '']);
     $wp_customize->add_setting('up_desc_image_mapa', ['default' => '']);
@@ -116,6 +125,7 @@ function up_footer_customizer( $wp_customize ) {
                 ]
             )
         );
+        // Address
         $wp_customize->add_control(
             new WP_Customize_Control (
                 $wp_customize,
@@ -139,6 +149,87 @@ function up_footer_customizer( $wp_customize ) {
                     'section' => 'up_footer_section',
                     'settings' => 'up_text_address_local',
                     'type' => 'textarea' ,
+                ]
+            )
+        );
+        // Phone
+        // $wp_customize->add_control(
+        //     new WP_Customize_Control (
+        //         $wp_customize,
+    
+        //         'up_link_phone_address',
+        //         [
+        //             'label' => 'Link do Whats',
+        //             'section' => 'up_footer_section',
+        //             'settings' => 'up_link_phone_address',
+        //             'type' => 'text' ,
+        //         ]
+        //     )
+        // );
+        $wp_customize->add_control(
+            new WP_Customize_Control (
+                $wp_customize,
+    
+                'up_phone_address',
+                [
+                    'label' => 'Numero do Telefone',
+                    'section' => 'up_footer_section',
+                    'settings' => 'up_phone_address',
+                    'type' => 'text' ,
+                ]
+            )
+        );
+        // Email
+        $wp_customize->add_control(
+            new WP_Customize_Control (
+                $wp_customize,
+    
+                'up_link_email_address',
+                [
+                    'label' => 'Link do Email',
+                    'section' => 'up_footer_section',
+                    'settings' => 'up_link_email_address',
+                    'type' => 'text' ,
+                ]
+            )
+        );
+        $wp_customize->add_control(
+            new WP_Customize_Control (
+                $wp_customize,
+    
+                'up_email_address',
+                [
+                    'label' => 'Digite o Email',
+                    'section' => 'up_footer_section',
+                    'settings' => 'up_email_address',
+                    'type' => 'text' ,
+                ]
+            )
+        );
+        // Website
+        $wp_customize->add_control(
+            new WP_Customize_Control (
+                $wp_customize,
+    
+                'up_link_website',
+                [
+                    'label' => 'Link do Site da empresa',
+                    'section' => 'up_footer_section',
+                    'settings' => 'up_link_website',
+                    'type' => 'text' ,
+                ]
+            )
+        );
+        $wp_customize->add_control(
+            new WP_Customize_Control (
+                $wp_customize,
+    
+                'up_website',
+                [
+                    'label' => 'Texto do Site',
+                    'section' => 'up_footer_section',
+                    'settings' => 'up_website',
+                    'type' => 'text' ,
                 ]
             )
         );

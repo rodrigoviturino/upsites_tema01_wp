@@ -70,21 +70,18 @@
                         <h5 class="text-white"><?php echo get_theme_mod('up_title_empresa'); ?></h5>
                     <?php endif; ?>
 
-                        <li>
-                            <a href="#">Turnaround Consulting</a>
-                        </li>
-                        <li>
-                            <a href="#">Testimonials</a>
-                        </li>
-                        <li>
-                            <a href="#">CEO Message</a>
-                        </li>
-                        <li>
-                            <a href="#">Partners</a>
-                        </li>
-                        <li>
-                            <a href="#">Careers</a>
-                        </li>
+                            <?php 
+                            if( has_nav_menu('footer1-menu') ) {
+                                wp_nav_menu([
+                                    'theme_location' => 'footer1-menu',
+                                    'fallback_cb' => false,
+                                    'container_class' => null,
+                                    'container_id' => 'navbarResponsive',
+                                    'menu_class' => 'navbar-nav mr-auto'
+                                ]);
+                            }
+                        ?>
+
                     </ul>
                 </div>
 
@@ -94,21 +91,19 @@
                         <h5 class="text-white"><?php echo get_theme_mod('up_title_servicos'); ?></h5>
                     <?php endif; ?>
 
-                        <li>
-                            <a href="#">Audit & Issurance</a>
-                        </li>
-                        <li>
-                            <a href="#">Trade & Stacks</a>
-                        </li>
-                        <li>
-                            <a href="#">Strategy Projection</a>
-                        </li>
-                        <li>
-                            <a href="#">Finance Projection</a>
-                        </li>
-                        <li>
-                            <a href="#">Bonds & Commodities</a>
-                        </li>
+                    <?php 
+                            if( has_nav_menu('footer2-menu') ) {
+                                wp_nav_menu([
+                                    'theme_location' => 'footer2-menu',
+                                    'fallback_cb' => false,
+                                    'container_class' => null,
+                                    'container_id' => 'navbarResponsive',
+                                    'menu_class' => 'navbar-nav mr-auto'
+                                ]);
+                            }
+                        ?>
+
+                      
                     </ul>
                 </div>
 
@@ -118,21 +113,19 @@
                         <h5 class="text-white"><?php echo get_theme_mod('up_title_suporte'); ?></h5>
                     <?php endif; ?>
 
-                        <li>
-                            <a href="#">FAQS</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact Us</a>
-                        </li>
-                        <li>
-                            <a href="#">Support Center</a>
-                        </li>
-                        <li>
-                            <a href="#">Use of Terms</a>
-                        </li>
-                        <li>
-                            <a href="#">Privacy Policy</a>
-                        </li>
+                    <?php 
+                            if( has_nav_menu('footer3-menu') ) {
+                                wp_nav_menu([
+                                    'theme_location' => 'footer3-menu',
+                                    'fallback_cb' => false,
+                                    'container_class' => null,
+                                    'container_id' => 'navbarResponsive',
+                                    'menu_class' => 'navbar-nav mr-auto'
+                                ]);
+                            }
+                        ?>
+
+                     
                     </ul>
                 </div>
 
@@ -152,12 +145,12 @@
                             <?php endif; ?>
                         </li>
 
-                        <?php if( get_theme_mod('up_link_phone_address') || get_theme_mod('up_phone_address') ) : ?>
+                        <?php if( get_theme_mod('up_phone_address') ) : ?>
                             <li class="phone">
                                 <span>
                                     <i class="fas fa-phone-alt"></i>
                                 </span>
-                                    <a href="<?= get_theme_mod('up_link_phone_address') ?>"> <?= get_theme_mod('up_phone_address'); ?> </a>
+                                    <a href="#"> <?= get_theme_mod('up_phone_address'); ?> </a>
                             </li>
                         <?php endif; ?>
                         
@@ -182,13 +175,13 @@
                     </ul>
                 </div>
 
-                <?php 
-                    $img_logo = get_template_directory_uri() . '/public/images/footer-map.png';
-                    if(get_theme_mod('up_image_map') ) : 
-                ?>
+                    <?php 
+                        $img_map = get_template_directory_uri() . '/public/images/footer-map.png';
+                        if(get_theme_mod('up_image_map') ) : 
+                    ?>
                     
                     <div class="col-md-3 d-flex align-items-center footer__menu__column">
-                        <img class="img-responsive" src="<?php echo $img_logo = get_theme_mod('up_image_map'); ?> " alt="<?php echo get_theme_mod('up_desc_image_mapa') ?>">
+                        <img class="img-responsive" src="<?php echo $img_map = get_theme_mod('up_image_map'); ?> " alt="<?php echo get_theme_mod('up_desc_image_mapa') ?>">
                     </div>
                 <?php endif; ?>
 
@@ -216,9 +209,7 @@
 
 </footer>
 
-<!-- <script src=" <?php// echo get_template_directory_uri(); ?>/node_modules/bootstrap/dist/js/bootstrap.min.js "></script> -->
-
-<script>
+<script type="text/javascript">
 let menu = document.querySelector('.header__rowBottom');
 let headerClassList = menu.classList;
 console.log(headerClassList);
@@ -233,6 +224,7 @@ window.addEventListener('scroll', () => {
         headerClassList.remove('scrollHide');
     }
 });
+
 
 </script>
 

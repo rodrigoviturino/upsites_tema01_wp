@@ -16,6 +16,9 @@ function up_theme_styles(){
 // Menu
 function up_after_setup(){
 
+    // Thumbnail
+    add_theme_support( 'post-thumbnails' );
+
     add_theme_support('custom-logo', [
    
         $defaults = [

@@ -163,9 +163,16 @@
 
                     .number {
                         margin: 0;
+                        text-decoration: none;
                         line-height: 21px;
                         font-weight: $font-weight-bold;
+                        transition: all 0.7s;
                         @include responsive-font-size(14px);
+
+                        &:hover {
+                            transition: all 0.7s;
+                            color: $gray-700;
+                        }
                     }
 
                 }

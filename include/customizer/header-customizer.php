@@ -5,6 +5,7 @@ function up_header_customizer( $wp_customize ) {
 
     // Settings
         // Row Bottom
+    $wp_customize->add_setting('up_link_telefone', ['default' => '']);
     $wp_customize->add_setting('up_telefone', ['default' => '']);
     // $wp_customize->add_setting('up_email', ['default' => '']);
     // $wp_customize->add_setting('up_endereco', ['default' => '']);
@@ -23,7 +24,7 @@ function up_header_customizer( $wp_customize ) {
 
     // Sections
     $wp_customize->add_section('up_header_section', [
-        'title' => 'Header - Topo',
+        'title' => 'Header - Infos',
         'priority' => '1'
     ]);
 
@@ -137,12 +138,25 @@ function up_header_customizer( $wp_customize ) {
             new WP_Customize_Control(
                 $wp_customize,
     
+                'up_link_telefone',
+                    [
+                        'label'=>'Link do Telefone caso seja Whatsapp',
+                        'section' => 'up_header_section',
+                        'settings' => 'up_link_telefone',
+                        'type' => 'text'  
+                    ]
+            )
+        );
+        $wp_customize->add_control(
+            new WP_Customize_Control(
+                $wp_customize,
+    
                 'up_telefone',
                     [
                         'label'=>'Inserir Telefone',
                         'section' => 'up_header_section',
                         'settings' => 'up_telefone',
-                        'type' => 'textarea'  
+                        'type' => 'text'  
                     ]
             )
         );

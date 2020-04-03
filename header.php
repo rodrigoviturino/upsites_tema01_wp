@@ -109,7 +109,7 @@
                         </li>
                         <li class="mr-0">
                             <?php if(get_theme_mod('up_telefone') ) : ?>
-                                <p class="number"><?php echo get_theme_mod('up_telefone') ?></p>
+                                <a href="<?= get_theme_mod('up_link_telefone'); ?>" class="number"><?php echo get_theme_mod('up_telefone') ?></a>
                             <?php endif; ?>
                         </li>
                     </ul>

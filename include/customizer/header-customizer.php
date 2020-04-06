@@ -4,23 +4,29 @@
 function up_header_customizer( $wp_customize ) {
 
     // Settings
-        // Row Bottom
+
+    // Logo
+    $wp_customize->add_setting('up_logo_header', ['default' => '']);
+
+    // Row Top
+    $wp_customize->add_setting('up_facebook', ['default' => '']);
+    $wp_customize->add_setting('up_twitter', ['default' => '']);
+    $wp_customize->add_setting('up_linkedin', ['default' => '']);
+    $wp_customize->add_setting('up_instagram', ['default' => '']);
+    $wp_customize->add_setting('up_text_contact_header', ['default' => '']);
+    $wp_customize->add_setting('up_link_contact_header', ['default' => '']);
+    
+    // Row Center
+    $wp_customize->add_setting('up_nome_escriorio', ['default' => '']);
+    $wp_customize->add_setting('up_endereco_escriorio', ['default' => '']);
+
+    // Row Bottom
     $wp_customize->add_setting('up_link_telefone', ['default' => '']);
     $wp_customize->add_setting('up_telefone', ['default' => '']);
     // $wp_customize->add_setting('up_email', ['default' => '']);
     // $wp_customize->add_setting('up_endereco', ['default' => '']);
 
-        // Row Center
-    $wp_customize->add_setting('up_nome_escriorio', ['default' => '']);
-    $wp_customize->add_setting('up_endereco_escriorio', ['default' => '']);
-        // Logo
-    $wp_customize->add_setting('up_logo_header', ['default' => '']);
 
-        // Row Top
-    $wp_customize->add_setting('up_facebook', ['default' => '']);
-    $wp_customize->add_setting('up_twitter', ['default' => '']);
-    $wp_customize->add_setting('up_linkedin', ['default' => '']);
-    $wp_customize->add_setting('up_instagram', ['default' => '']);
 
     // Sections
     $wp_customize->add_section('up_header_section', [
@@ -85,6 +91,33 @@ function up_header_customizer( $wp_customize ) {
                         'label'=>'Link do Linkedin',
                         'section' => 'up_header_section',
                         'settings' => 'up_linkedin',
+                        'type' => 'text'  
+                    ]
+            )
+        );
+        // Botão Contato Header
+        $wp_customize->add_control(
+            new WP_Customize_Control(
+                $wp_customize,
+    
+                'up_text_contact_header',
+                    [
+                        'label'=>'Texto Botão Contato Header',
+                        'section' => 'up_header_section',
+                        'settings' => 'up_text_contact_header',
+                        'type' => 'text'  
+                    ]
+            )
+        );
+        $wp_customize->add_control(
+            new WP_Customize_Control(
+                $wp_customize,
+    
+                'up_link_contact_header',
+                    [
+                        'label'=>'Link Botão Contato Header',
+                        'section' => 'up_header_section',
+                        'settings' => 'up_link_contact_header',
                         'type' => 'text'  
                     ]
             )

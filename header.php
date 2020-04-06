@@ -55,7 +55,7 @@
                 </div>
                 <div class="header__rowTop__columnRight col-md-3 col-6">
                     <a href="<?= get_theme_mod('up_link_contact_header'); ?>">
-                        <?= get_theme_mod('up_text_contact_header'); ?>REQUEST FOR QUOTE
+                        <?= get_theme_mod('up_text_contact_header'); ?>
                     </a>
                 </div>
             </div>

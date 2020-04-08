@@ -17,7 +17,6 @@
                 
                 <div class="footer__top__wrapper__redeSocial col-md-6">
                     <ul>
-
                         
                         <?php if(get_theme_mod('up_facebook_footer') ) : ?>
                             <li>
@@ -26,7 +25,6 @@
                                 </a>
                             </li>
                         <?php endif; ?>
-
                         
                         <?php if(get_theme_mod('up_twitter_footer') ) : ?>
                             <li>
@@ -36,7 +34,6 @@
                             </li>
                         <?php endif; ?>
 
-                        
                         <?php if(get_theme_mod('up_linkedin_footer') ) : ?>
                             <li>
                                 <a href="<?php echo get_theme_mod('up_linkedin_footer'); ?>">

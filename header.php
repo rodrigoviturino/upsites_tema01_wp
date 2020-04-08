@@ -69,11 +69,11 @@
                 <div class="col-md-4 col-sm-3 col-12 header__rowCenter__logo">
                     <a href="<?php bloginfo('url'); ?>">
                         <?php 
-                        $img_logo = get_template_directory_uri() . '/public/images/logo.png';
+                        $img_logo = get_theme_mod('up_logo_header');
                             if(get_theme_mod('up_logo_header') ) : 
                         ?>
                             <a class="navbar-brand m-auto order-1 order-lg-2" href="<?php bloginfo(url);?> ">
-                                <img src="<?php echo $img_logo ?> " class='img-fluid' alt="Logo Empresa" <?php echo get_theme_mod('up_logo_header'); ?>>
+                                <img src="<?= $img_logo ?> " class='img-fluid' alt="<?= get_theme_mod('up_desc_logo_header'); ?> ">
                             </a>
                         <?php endif; ?>
                     </a>

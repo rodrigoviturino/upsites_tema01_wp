@@ -6,6 +6,7 @@ function up_footer_customizer( $wp_customize ) {
     // Settings 
         // Logo
     $wp_customize->add_setting( 'up_logo_footer', [ 'default' => "" ]);
+    $wp_customize->add_setting( 'up_desc_logo_footer', [ 'default' => "" ]);
     
     // Informações
     $wp_customize->add_setting( 'up_title_menu', [ 'default' => "" ]);
@@ -61,6 +62,18 @@ function up_footer_customizer( $wp_customize ) {
                 'label' => 'Logo Footer',
                 'section' => 'up_footer_section',
                 'settings' => 'up_logo_footer',
+            ]
+        )
+    );
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control (
+            $wp_customize,
+
+            'up_desc_logo_footer',
+            [
+                'label' => 'Descrição Imagem da Logo Footer',
+                'section' => 'up_footer_section',
+                'settings' => 'up_desc_logo_footer',
             ]
         )
     );

@@ -7,6 +7,7 @@ function up_header_customizer( $wp_customize ) {
 
     // Logo
     $wp_customize->add_setting('up_logo_header', ['default' => '']);
+    $wp_customize->add_setting('up_desc_logo_header', ['default' => '']);
 
     // Row Top
     $wp_customize->add_setting('up_facebook', ['default' => '']);
@@ -135,6 +136,18 @@ function up_header_customizer( $wp_customize ) {
                         'label'=>'Logo Header',
                         'section' => 'up_header_section',
                         'settings' => 'up_logo_header',
+                    ]
+            )
+        );
+        $wp_customize->add_control(
+            new WP_Customize_Image_Control(
+                $wp_customize,
+    
+                'up_desc_logo_header',
+                    [
+                        'label'=>'Descrição Imagem da Logo Header',
+                        'section' => 'up_header_section',
+                        'settings' => 'up_desc_logo_header',
                     ]
             )
         );

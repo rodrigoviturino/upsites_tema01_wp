@@ -6,12 +6,12 @@
 
                 <div class="footer__top__wrapper__logo col-md-6">
                     <?php 
-                        $img_logo = get_template_directory_uri() . '/public/images/withe_logo.png';
-                        if(get_theme_mod('up_logo_footer') ) : 
-                    ?>
-                        <a href="<?php bloginfo(url); ?>" class="logo">
-                            <img class="img-responsive" src="<?php echo $img_logo = get_theme_mod('up_logo_footer'); ?> " alt="<?php echo get_theme_mod('up_desc_logo_footer') ?>">
-                        </a>
+                        $img_logo = get_theme_mod('up_logo_footer');
+                            if(get_theme_mod('up_logo_footer') ) : 
+                        ?>
+                            <a class="navbar-brand m-auto order-1 order-lg-2" href="<?php bloginfo(url);?> ">
+                                <img src="<?= $img_logo ?> " class='img-fluid' alt="<?= get_theme_mod('up_desc_logo_footer'); ?> ">
+                            </a>
                     <?php endif; ?>
                 </div>
                 
